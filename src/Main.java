@@ -128,7 +128,6 @@ public class Main {
                 label1.setText("The value is " + String.valueOf(decimal));
             }
         });
-=======
 
         button1.addActionListener(new ActionListener() {
             @Override
@@ -205,6 +204,5 @@ public class Main {
                 label1.setText("The value is " + String.valueOf(decimal));
             }
         });
->>>>>>>
     }
 }
