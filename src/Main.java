@@ -15,7 +15,7 @@ public class Main {
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         createUI(frame);
-        frame.setSize(500, 500);
+        frame.setSize(500, 300);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
@@ -42,7 +42,6 @@ public class Main {
         frame.getContentPane().add(panel, BorderLayout.CENTER);
         frame.getContentPane().add(panel2, BorderLayout.SOUTH);
 
-<<<<<<<
         /*
             Buttons below are made to create a secondary window where the user can enter the value for
             converstion, you cannot have 2 miniture windows opened up at once. Sadly there was no way for me
@@ -52,6 +51,7 @@ public class Main {
 
         // label1,2,3 and 4 are used to put the converted number on the GUI Panel
 
+
         button1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -66,7 +66,7 @@ public class Main {
                 );
                 int iresult = Integer.parseInt(result);
                 String BinString  = Integer.toBinaryString(iresult);
-                label1.setText("The value is " +BinString);
+                label1.setText("The value " + "of "+ result + " is " +BinString + " in Binary");
             }
         });
 
@@ -84,7 +84,7 @@ public class Main {
                 );
                 int iresult = Integer.parseInt(result);
                 String HexString  = Integer.toHexString(iresult);
-                label1.setText("The value is " +HexString);
+                label1.setText("The value " + "of "+ result + " is "  +HexString + " in Hexadecimal");
             }
         });
 
@@ -104,84 +104,7 @@ public class Main {
 
                 int decimal = Integer.parseInt(result, 2);
 
-                label1.setText("The value is " + String.valueOf(decimal));
-            }
-        });
-
-
-        button4.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                String result = (String) JOptionPane.showInputDialog(
-                        frame,
-                        "Enter Number to Convert",
-                        "Enter here",
-                        JOptionPane.PLAIN_MESSAGE,
-                        null,
-                        null,
-                        ""
-                );
-
-
-                int decimal = Integer.parseInt(result, 16);
-
-                label1.setText("The value is " + String.valueOf(decimal));
-            }
-        });
-
-        button1.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                String result = (String) JOptionPane.showInputDialog(
-                        frame,
-                        "Enter Number to Convert",
-                        "Enter here",
-                        JOptionPane.PLAIN_MESSAGE,
-                        null,
-                        null,
-                        ""
-                );
-                int iresult = Integer.parseInt(result);
-                String BinString  = Integer.toBinaryString(iresult);
-                label1.setText("The value is " +BinString);
-            }
-        });
-
-        button2.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                String result = (String) JOptionPane.showInputDialog(
-                        frame,
-                        "Enter Number to Convert",
-                        "Enter here",
-                        JOptionPane.PLAIN_MESSAGE,
-                        null,
-                        null,
-                        ""
-                );
-                int iresult = Integer.parseInt(result);
-                String HexString  = Integer.toHexString(iresult);
-                label1.setText("The value is " +HexString);
-            }
-        });
-
-        button3.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                String result = (String) JOptionPane.showInputDialog(
-                        frame,
-                        "Enter Number to Convert",
-                        "Enter here",
-                        JOptionPane.PLAIN_MESSAGE,
-                        null,
-                        null,
-                        ""
-                );
-
-
-                int decimal = Integer.parseInt(result, 2);
-
-                label1.setText("The value is " + String.valueOf(decimal));
+                label1.setText("The value " + "of "+ result + " is " +  String.valueOf(decimal) + " in Decimal");
             }
         });
 
@@ -201,7 +124,7 @@ public class Main {
 
                 int decimal = Integer.parseInt(result, 16);
 
-                label1.setText("The value is " + String.valueOf(decimal));
+                label1.setText("The value " + "of "+ result + " is "  + String.valueOf(decimal) + " in Decimal");
             }
         });
     }
