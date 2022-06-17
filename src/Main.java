@@ -9,6 +9,7 @@ public class Main {
         createWindow();
     }
 
+    // Self explanitory
     private static void createWindow(){
         JFrame frame = new JFrame("Exam");
 
@@ -27,6 +28,7 @@ public class Main {
         LayoutManager layout = new FlowLayout();
         panel.setLayout(layout);
 
+        // creating all buttons and labels
         JButton button1 = new JButton("Convert Decimal to Binary");
         panel.add(button1);
         final JLabel label1 = new JLabel();
@@ -40,6 +42,14 @@ public class Main {
         frame.getContentPane().add(panel, BorderLayout.CENTER);
         frame.getContentPane().add(panel2, BorderLayout.SOUTH);
 
+        /*
+            Buttons below are made to create a secondary window where the user can enter the value for
+            converstion, you cannot have 2 miniture windows opened up at once. Sadly there was no way for me
+            to find a way to loop the buttons incase the input was bad and caused a error, however it only closes
+            the miniture window.
+         */
+
+        // label1,2,3 and 4 are used to put the converted number on the GUI Panel
 
         button1.addActionListener(new ActionListener() {
             @Override
@@ -96,6 +106,7 @@ public class Main {
                 label1.setText("The value is " + String.valueOf(decimal));
             }
         });
+
 
         button4.addActionListener(new ActionListener() {
             @Override
